@@ -1,0 +1,6 @@
+replicaCount: 3
+
+image:
+  repository: "" # TODO: change this
+  pullPolicy: Always
+

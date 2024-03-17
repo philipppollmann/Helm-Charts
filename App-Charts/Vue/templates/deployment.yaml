@@ -1,0 +1,3 @@
+{{ if not .Values.image.repository }}
+{{ fail "Please specify the repository!" }}
+{{ end }}
