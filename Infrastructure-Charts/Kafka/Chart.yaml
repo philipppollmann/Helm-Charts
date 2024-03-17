@@ -1,0 +1,8 @@
+apiVersion: v2
+name: kafka
+version: 1.0.3
+description: Apache Kafka is a distributed event streaming platform that allows applications to process streams of records
+dependencies:
+  - name: kafka
+    repository: "https://charts.bitnami.com/bitnami"
+    version: "22.1.5"
