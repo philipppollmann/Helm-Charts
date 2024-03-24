@@ -1,0 +1,20 @@
+container:
+  port: 8080 # TODO: Change this
+
+service:
+  port: 9000 # TODO: Change this
+
+projectName: web-app # TODO: Change this
+
+image:
+  repository: "" # TODO: Change this
+
+replicaCount: 3
+
+resources:
+  limits:
+    cpu: 256m
+    memory: 512Mi
+  requests:
+    cpu: 256m
+    memory: 512Mi
