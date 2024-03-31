@@ -1,4 +1,4 @@
-prometheus:
-  server:
-    service:
-      type: NodePort
+kube-prometheus-stack:
+  prometheus:
+    prometheusSpec:
+      routePrefix: /prometheus

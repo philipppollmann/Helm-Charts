@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: homeassistant-dashboard
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`homeassistant.localhost`)
+      kind: Rule
+      services:
+        - name: homeassistant-home-assistant
+          port: 8123
