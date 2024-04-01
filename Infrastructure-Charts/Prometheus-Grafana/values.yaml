@@ -2,3 +2,4 @@ kube-prometheus-stack:
   prometheus:
     prometheusSpec:
       routePrefix: /prometheus
+domain: localhost
