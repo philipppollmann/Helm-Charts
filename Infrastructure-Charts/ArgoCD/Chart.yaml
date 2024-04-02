@@ -2,6 +2,7 @@ apiVersion: v2
 name: argocd
 version: 0.1.0
 description: A Helm Chart for ArgoCD
+icon: https://argo-cd.readthedocs.io/en/stable/assets/logo.png
 dependencies:
   - name: argo-cd
     repository: https://argoproj.github.io/argo-helm
