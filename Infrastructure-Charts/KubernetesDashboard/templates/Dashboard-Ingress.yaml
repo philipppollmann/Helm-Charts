@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: kubernetes-dashboard
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`kubernetes.{{.Values.domain}}`)
+      kind: Rule
+      services:
+        - name: {{ .Release.Name }}-kubernetes-dashboard-web
+          port: 8000

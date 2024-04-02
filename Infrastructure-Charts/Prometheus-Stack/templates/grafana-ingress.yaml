@@ -6,8 +6,8 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`grafana.{{.Values.domain}}`)
+    - match: Host(`grafana.{{ .Values.domain }}`)
       kind: Rule
       services:
-        - name: prometheus-grafana
+        - name: {{ .Release.Name }}-grafana
           port: 80

@@ -1,0 +1,8 @@
+apiVersion: v2
+name: akhq
+description: A Helm chart for AKHQ
+version: 0.1.0
+dependencies:
+  - name: akhq
+    version: 0.3.1
+    repository: https://akhq.io
