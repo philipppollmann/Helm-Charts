@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: argocd
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`argocd.{{.Values.domain}}`)
+    kind: Rule
+    services:
+    - name: argocd-server
+      port: 80
