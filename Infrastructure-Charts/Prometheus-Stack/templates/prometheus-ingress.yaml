@@ -3,11 +3,11 @@ kind: IngressRoute
 metadata:
   name: prometheus
 spec:
-    entryPoints:
-        - web
-    routes:
-    - match: Host(`prometheus.{{.Values.domain}}`)
-      kind: Rule
-      services:
-      - name: {{ .Release.Name }}-prometheus
-        port: 9090
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`prometheus.localhost`)
+    kind: Rule
+    services:
+    - name: prometheus-kube-prometheus-prometheus
+      port: 9090
