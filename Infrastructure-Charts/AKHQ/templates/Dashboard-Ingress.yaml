@@ -1,13 +1,13 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: argocd
+  name: akhq
 spec:
   entryPoints:
-    - websecure
+    - web
   routes:
-  - match: Host(`argocd.localhost`)
+  - match: Host(`akhq.localhost`)
     kind: Rule
     services:
-    - name: argocd-server
-      port: 443
+    - name: akhq
+      port: 80

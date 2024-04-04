@@ -9,3 +9,8 @@ helm dependency build
 cd ..
 helm install prometheus-grafana ./Prometheus-Grafana
 ```
+# Secrets
+```
+kubectl get secret prometheus-grafana -n default -o jsonpath="{.data.admin-user}" | base64 --decode
+kubectl get secret prometheus-grafana -n default -o jsonpath="{.data.admin-password}" | base64 --decode
+```

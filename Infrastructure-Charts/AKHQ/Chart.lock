@@ -1,0 +1,6 @@
+dependencies:
+- name: akhq
+  repository: https://akhq.io
+  version: 0.3.1
+digest: sha256:c814d3cb34e11d1705ae7bbf8dab5d03c9c9ff1f2f61342eaf99f6e5ec2f8cef
+generated: "2024-04-03T18:18:11.460675+02:00"

@@ -9,5 +9,5 @@ spec:
     - match: Host(`kubernetes.localhost`)
       kind: Rule
       services:
-        - name: kubernetesdashboard-kubernetes-dashboard-web
+        - name: kubedashboard-kubernetes-dashboard-web
           port: 8000
