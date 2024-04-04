@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+    name: kyverno
+spec:
+    entryPoints:
+        - web
+    routes:
+        - match: Host(`kyverno.localhost`)
+          kind: Rule
+          services:
+          - name: kyverno-svc
+            port: 443
