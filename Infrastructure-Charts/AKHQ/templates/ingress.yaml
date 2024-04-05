@@ -1,0 +1,15 @@
+{{- if ne (.Values.ingressRoute.enabled | toString ) "false" }}
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: Host(`{{ .Values.ingressRoute.adminDomain }}`) && PathPrefix(`{{.Values.ingressRoute.pathPrefix}}`)
+      services:
+        - name: {{ .Values.ingressRoute.upstream.service.name }}
+          port: {{ .Values.ingressRoute.upstream.service.port }}
+{{- end }}
