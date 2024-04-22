@@ -10,4 +10,4 @@ spec:
           kind: Rule
           services:
           - name: influxdb
-            port: 8086
+            port: 8088

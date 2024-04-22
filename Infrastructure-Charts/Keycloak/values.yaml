@@ -1,1 +1,4 @@
 domain: localhost
+auth:
+  adminUser: admin
+  adminPassword: admin123
