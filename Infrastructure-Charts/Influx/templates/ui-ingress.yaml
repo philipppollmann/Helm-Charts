@@ -6,7 +6,7 @@ spec:
     entryPoints:
         - web
     routes:
-        - match: Host(`influxdb.localhost`)
+        - match: Host(`influx.{{ .Values.domain }}`)
           kind: Rule
           services:
           - name: influxdb
