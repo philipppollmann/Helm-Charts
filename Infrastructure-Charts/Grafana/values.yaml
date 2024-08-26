@@ -1,0 +1,19 @@
+grafana:
+  adminPassword: "your_secure_password"
+  service:
+    type: ClusterIP
+    port: 80
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx
+    paths:
+      - /
+    hosts:
+      - grafana.localhost
+  persistence:
+    enabled: true
+    storageClassName: "standard"
+    accessModes:
+      - ReadWriteOnce
+    size: 10Gi
